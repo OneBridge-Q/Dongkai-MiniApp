@@ -1,118 +1,428 @@
 page {
-  background: #081c15;
+  min-height: 100%;
+  background: #06261d;
 }
 
 .page {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
-  padding: 120rpx 48rpx 80rpx;
+  padding:
+    calc(env(safe-area-inset-top) + 88rpx)
+    42rpx
+    calc(env(safe-area-inset-bottom) + 54rpx);
   box-sizing: border-box;
+  overflow: hidden;
   background:
+    radial-gradient(
+      circle at 90% 8%,
+      rgba(80, 154, 94, 0.24) 0,
+      rgba(80, 154, 94, 0) 28%
+    ),
+    radial-gradient(
+      circle at 5% 78%,
+      rgba(92, 147, 78, 0.18) 0,
+      rgba(92, 147, 78, 0) 25%
+    ),
     linear-gradient(
       180deg,
-      #071a14 0%,
-      #0b2b20 55%,
-      #123b2b 100%
+      #031f18 0%,
+      #062b20 46%,
+      #0b3b29 100%
     );
 }
 
-.content {
+/* 顶部区域 */
+
+.header {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   display: flex;
-  min-height: calc(100vh - 200rpx);
   flex-direction: column;
   align-items: center;
 }
 
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .brand {
-  color: #f4d88a;
+  margin: 0 28rpx;
+  color: #f8dc82;
   font-size: 88rpx;
   font-weight: 800;
+  line-height: 1.15;
   letter-spacing: 18rpx;
   text-indent: 18rpx;
+  text-shadow: 0 8rpx 28rpx rgba(248, 220, 130, 0.16);
+}
+
+.brand-decoration {
+  color: rgba(248, 220, 130, 0.75);
+  font-size: 54rpx;
+  font-weight: 700;
+  transform: rotate(-10deg);
+}
+
+.subtitle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24rpx;
 }
 
 .subtitle {
-  margin-top: 16rpx;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 26rpx;
-  letter-spacing: 6rpx;
+  margin: 0 22rpx;
+  color: rgba(190, 211, 190, 0.82);
+  font-size: 28rpx;
+  font-weight: 500;
+  letter-spacing: 8rpx;
 }
+
+.mini-leaf {
+  color: rgba(110, 161, 99, 0.72);
+  font-size: 20rpx;
+  transform: rotate(45deg);
+}
+
+/* 故事卡片 */
 
 .story-card {
+  position: relative;
+  z-index: 4;
   width: 100%;
-  margin-top: 100rpx;
-  padding: 58rpx 42rpx;
+  margin-top: 86rpx;
+  padding: 64rpx 42rpx 68rpx;
   box-sizing: border-box;
-  border: 2rpx solid rgba(244, 216, 138, 0.28);
-  border-radius: 40rpx;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 28rpx 80rpx rgba(0, 0, 0, 0.24);
-  text-align: center;
+  border: 2rpx solid rgba(222, 200, 111, 0.28);
+  border-radius: 44rpx;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(39, 80, 64, 0.64) 0%,
+      rgba(27, 67, 54, 0.72) 100%
+    );
+  box-shadow:
+    inset 0 1rpx 0 rgba(255, 255, 255, 0.05),
+    0 26rpx 70rpx rgba(0, 0, 0, 0.18);
 }
 
-.symbol {
-  font-size: 82rpx;
+.character-area {
+  position: relative;
+  width: 240rpx;
+  height: 160rpx;
+  margin: 0 auto;
+}
+
+.character-glow {
+  position: absolute;
+  top: 16rpx;
+  left: 50%;
+  width: 170rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(210, 224, 113, 0.08);
+  transform: translateX(-50%);
+  filter: blur(20rpx);
+}
+
+.ant {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 90rpx;
+  line-height: 112rpx;
+  transform: translateY(-8rpx);
+}
+
+.leaf-platform {
+  position: absolute;
+  z-index: 1;
+  bottom: 8rpx;
+  left: 50%;
+  width: 190rpx;
+  height: 42rpx;
+  border-radius: 100% 16% 100% 20%;
+  background:
+    linear-gradient(
+      90deg,
+      #477d43 0%,
+      #76a654 52%,
+      #3f7542 100%
+    );
+  transform: translateX(-50%) rotate(-2deg);
+  box-shadow: 0 10rpx 24rpx rgba(0, 0, 0, 0.18);
+}
+
+.leaf-platform::after {
+  content: "";
+  position: absolute;
+  top: 20rpx;
+  left: 18rpx;
+  width: 152rpx;
+  height: 2rpx;
+  background: rgba(215, 234, 161, 0.3);
+  transform: rotate(-3deg);
 }
 
 .headline {
-  margin-top: 28rpx;
-  color: #fff4cf;
-  font-size: 40rpx;
-  font-weight: 700;
+  margin-top: 32rpx;
+  color: #fff0bd;
+  font-size: 42rpx;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 2rpx;
 }
 
-.story {
-  margin-top: 32rpx;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 30rpx;
-  line-height: 1.8;
+.story-section {
+  margin-top: 48rpx;
+}
+
+.story-section-bottom {
+  margin-top: 42rpx;
+}
+
+.story-line {
+  color: rgba(244, 248, 243, 0.88);
+  font-size: 31rpx;
+  font-weight: 450;
+  line-height: 1.95;
+  text-align: center;
+  letter-spacing: 1rpx;
+}
+
+.divider {
+  width: 86%;
+  height: 1rpx;
+  margin: 42rpx auto 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(222, 200, 111, 0.18) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* 底部操作区域 */
+
+.action-area {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 92rpx;
 }
 
 .start-button {
-  width: 100%;
-  height: 108rpx;
-  margin-top: auto;
+  width: 78%;
+  height: 112rpx;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-radius: 54rpx;
-  background: #f4d35e;
-  color: #173b2b;
-  font-size: 34rpx;
-  font-weight: 700;
-  line-height: 108rpx;
-  box-shadow: 0 20rpx 44rpx rgba(244, 211, 94, 0.24);
+  border-radius: 58rpx;
+  background:
+    linear-gradient(
+      135deg,
+      #f6cf4d 0%,
+      #ffe27a 52%,
+      #efc84e 100%
+    );
+  color: #123f30;
+  font-size: 35rpx;
+  font-weight: 750;
+  line-height: 112rpx;
+  letter-spacing: 1rpx;
+  box-shadow:
+    0 18rpx 42rpx rgba(243, 205, 76, 0.22),
+    inset 0 2rpx 0 rgba(255, 255, 255, 0.35);
 }
 
 .start-button::after {
   border: none;
 }
 
+.start-button:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
 .hint {
-  margin-top: 26rpx;
-  color: rgba(255, 255, 255, 0.52);
-  font-size: 24rpx;
+  margin-top: 30rpx;
+  color: rgba(190, 211, 190, 0.62);
+  font-size: 25rpx;
+  letter-spacing: 2rpx;
 }
 
-.glow {
+.button-decoration {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(10rpx);
+  top: 24rpx;
+  color: rgba(101, 156, 91, 0.7);
+  font-size: 58rpx;
 }
 
-.glow-one {
+.decoration-left {
+  left: 26rpx;
+  transform: rotate(-22deg);
+}
+
+.decoration-right {
+  right: 26rpx;
+  transform: rotate(158deg);
+}
+
+/* 萤火虫 */
+
+.firefly {
+  position: absolute;
+  z-index: 3;
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background: #ffe978;
+  box-shadow:
+    0 0 10rpx rgba(255, 233, 120, 0.9),
+    0 0 28rpx rgba(255, 233, 120, 0.55);
+  animation: fireflyBlink 2.8s ease-in-out infinite;
+}
+
+.firefly-1 {
+  top: 29%;
+  left: 8%;
+  animation-delay: 0.3s;
+}
+
+.firefly-2 {
+  top: 38%;
+  right: 7%;
+  animation-delay: 1.1s;
+}
+
+.firefly-3 {
+  top: 62%;
+  left: 14%;
+  animation-delay: 1.8s;
+}
+
+.firefly-4 {
+  bottom: 17%;
+  right: 10%;
+  animation-delay: 0.7s;
+}
+
+.firefly-5 {
+  bottom: 12%;
+  left: 10%;
+  animation-delay: 2.1s;
+}
+
+@keyframes fireflyBlink {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* 背景光晕 */
+
+.background-glow {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(40rpx);
+}
+
+.glow-top {
   top: -140rpx;
   right: -100rpx;
-  width: 360rpx;
-  height: 360rpx;
-  background: rgba(68, 180, 116, 0.18);
+  width: 410rpx;
+  height: 410rpx;
+  background: rgba(68, 139, 84, 0.16);
 }
 
-.glow-two {
-  bottom: 100rpx;
-  left: -140rpx;
-  width: 320rpx;
-  height: 320rpx;
-  background: rgba(244, 211, 94, 0.1);
+.glow-bottom {
+  bottom: -80rpx;
+  left: -150rpx;
+  width: 420rpx;
+  height: 420rpx;
+  background: rgba(108, 156, 83, 0.13);
+}
+
+/* 底部叶片剪影 */
+
+.bottom-leaves {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 170rpx;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bottom-leaf {
+  position: absolute;
+  bottom: -35rpx;
+  width: 90rpx;
+  height: 180rpx;
+  border-radius: 100% 0 100% 0;
+  background: rgba(2, 28, 22, 0.52);
+}
+
+.leaf-left-one {
+  left: -16rpx;
+  transform: rotate(-35deg);
+}
+
+.leaf-left-two {
+  left: 48rpx;
+  bottom: -65rpx;
+  transform: rotate(-15deg) scale(0.82);
+}
+
+.leaf-right-one {
+  right: -20rpx;
+  transform: rotate(35deg) scaleX(-1);
+}
+
+.leaf-right-two {
+  right: 52rpx;
+  bottom: -64rpx;
+  transform: rotate(15deg) scale(-0.82, 0.82);
+}
+
+/* 小屏幕适配 */
+
+@media screen and (max-height: 700px) {
+  .page {
+    padding-top: calc(env(safe-area-inset-top) + 54rpx);
+  }
+
+  .brand {
+    font-size: 76rpx;
+  }
+
+  .story-card {
+    margin-top: 54rpx;
+    padding-top: 44rpx;
+    padding-bottom: 48rpx;
+  }
+
+  .character-area {
+    height: 132rpx;
+  }
+
+  .action-area {
+    margin-top: 54rpx;
+  }
 }
