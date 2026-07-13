@@ -8,10 +8,8 @@ Page({
   startExplore() {
     console.log('click_start_explore')
 
-    wx.showToast({
-      title: '任务即将开启',
-      icon: 'none',
-      duration: 1500,
+    wx.navigateTo({
+      url: '/pages/task/task',
     })
   },
 })

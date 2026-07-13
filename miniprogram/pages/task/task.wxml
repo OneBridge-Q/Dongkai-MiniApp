@@ -1,0 +1,88 @@
+<view class="page">
+  <view class="background-glow glow-top"></view>
+  <view class="background-glow glow-bottom"></view>
+
+  <view class="firefly firefly-1"></view>
+  <view class="firefly firefly-2"></view>
+  <view class="firefly firefly-3"></view>
+
+  <view class="top-bar">
+    <view class="back-button" bindtap="goBack">‹</view>
+
+    <view class="top-title">
+      第一个探索任务
+    </view>
+
+    <view class="top-placeholder"></view>
+  </view>
+
+  <view class="mission-label">
+    任务 01
+  </view>
+
+  <view class="mission-title">
+    寻找搬运大师
+  </view>
+
+  <view class="mission-card">
+    <view class="character-area">
+      <view class="character-glow"></view>
+      <view class="ant">🐜</view>
+      <view class="leaf-platform"></view>
+    </view>
+
+    <view class="character-name">
+      蚂蚁
+    </view>
+
+    <view class="character-title">
+      昆虫世界的搬运大师
+    </view>
+
+    <view class="dialogue">
+      <view class="dialogue-line">“我好像忘记了自己的名字……”</view>
+      <view class="dialogue-line">“也忘记了伙伴们去了哪里。”</view>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="mission-description">
+      请在你身边找到一只蚂蚁，
+      用探索镜头帮助它恢复记忆。
+    </view>
+  </view>
+
+  <view class="clue-card">
+    <view class="clue-header">
+      <view class="clue-icon">⌖</view>
+      <view class="clue-title">探索线索</view>
+    </view>
+
+    <view class="clue-list">
+      <view class="clue-item">
+        <view class="clue-dot"></view>
+        <view class="clue-text">看看小区里的花坛边</view>
+      </view>
+
+      <view class="clue-item">
+        <view class="clue-dot"></view>
+        <view class="clue-text">留意树根和石缝附近</view>
+      </view>
+
+      <view class="clue-item">
+        <view class="clue-dot"></view>
+        <view class="clue-text">不要用手触碰或伤害它</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-area">
+    <button class="start-button" bindtap="beginMission">
+      拿起镜头，开始寻找
+    </button>
+
+    <view class="safety-hint">
+      探索时请让家长陪在身边
+    </view>
+  </view>
+</view>
