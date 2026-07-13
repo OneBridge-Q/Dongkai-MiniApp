@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="glow glow-one"></view>
+  <view class="glow glow-two"></view>
+
+  <view class="content">
+    <view class="brand">洞开</view>
+    <view class="subtitle">少年自然探索计划</view>
+
+    <view class="story-card">
+      <view class="symbol">🐜</view>
+
+      <view class="headline">
+        世界正在失去记忆
+      </view>
+
+      <view class="story">
+        森林里的昆虫们，
+        正在慢慢忘记自己的名字。
+      </view>
+
+      <view class="story">
+        只有真正的自然探索者，
+        才能帮助它们恢复记忆。
+      </view>
+    </view>
+
+    <button class="start-button" bindtap="startExplore">
+      开始第一次探索
+    </button>
+
+    <view class="hint">
+      你的第一个任务正在等待
+    </view>
+  </view>
+</view>
