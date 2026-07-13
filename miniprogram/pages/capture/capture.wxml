@@ -1,0 +1,119 @@
+<scroll-view
+  class="page"
+  scroll-y
+  enhanced
+  show-scrollbar="{{false}}"
+>
+  <!-- 背景光晕 -->
+  <view class="background-glow glow-top"></view>
+  <view class="background-glow glow-bottom"></view>
+
+  <!-- 顶部导航 -->
+  <view class="top-bar">
+    <view class="back-button" bindtap="goBack">‹</view>
+    <view class="top-title">探索镜头</view>
+    <view class="top-placeholder"></view>
+  </view>
+
+  <!-- 当前任务 -->
+  <view class="mission-info">
+    <view class="mission-label">当前任务</view>
+    <view class="mission-name">寻找搬运大师——蚂蚁</view>
+  </view>
+
+  <!-- 未拍摄状态 -->
+  <view wx:if="{{!imagePath}}" class="camera-card">
+    <view class="scan-frame">
+      <view class="corner corner-top-left"></view>
+      <view class="corner corner-top-right"></view>
+      <view class="corner corner-bottom-left"></view>
+      <view class="corner corner-bottom-right"></view>
+
+      <view class="camera-content">
+        <view class="camera-icon">⌾</view>
+
+        <view class="camera-title">
+          发现蚂蚁了吗？
+        </view>
+
+        <view class="camera-description">
+          <view>把蚂蚁放在镜头中央，</view>
+          <view>尽量拍得清楚一些。</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 拍摄提示 -->
+    <view class="tips">
+      <view class="tip-item">
+        <view class="tip-number">1</view>
+        <view class="tip-text">
+          保持适当距离，不要触碰蚂蚁
+        </view>
+      </view>
+
+      <view class="tip-item">
+        <view class="tip-number">2</view>
+        <view class="tip-text">
+          让蚂蚁出现在画面中央
+        </view>
+      </view>
+
+      <view class="tip-item">
+        <view class="tip-number">3</view>
+        <view class="tip-text">
+          光线充足时识别会更准确
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 已拍摄状态 -->
+  <view wx:else class="preview-card">
+    <image
+      class="preview-image"
+      src="{{imagePath}}"
+      mode="aspectFill"
+    ></image>
+
+    <view class="preview-mask">
+      <view class="preview-status">
+        已捕获探索影像
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作区 -->
+  <view class="action-area">
+    <!-- 未拍摄 -->
+    <view
+      wx:if="{{!imagePath}}"
+      class="capture-button"
+      bindtap="takePhoto"
+    >
+      <view class="capture-circle"></view>
+      <view class="capture-text">拍摄蚂蚁</view>
+    </view>
+
+    <!-- 已拍摄 -->
+    <block wx:else>
+      <view
+        class="confirm-button"
+        bindtap="confirmPhoto"
+      >
+        使用这张照片
+      </view>
+
+      <view
+        class="retry-button"
+        bindtap="retakePhoto"
+      >
+        重新拍摄
+      </view>
+    </block>
+
+    <view class="safety-hint">
+      探索时请注意脚下，并让家长陪在身边
+    </view>
+  </view>
+</scroll-view>

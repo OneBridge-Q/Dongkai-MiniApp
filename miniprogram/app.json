@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/task/task"
+    "pages/task/task",
+    "pages/capture/capture"
   ],
   "window": {
     "navigationBarTextStyle": "black",

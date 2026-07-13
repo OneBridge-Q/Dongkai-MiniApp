@@ -1,32 +1,27 @@
 page {
-  min-height: 100%;
+  height: 100%;
   background: #06261d;
 }
 
 .page {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   padding:
-    calc(env(safe-area-inset-top) + 34rpx)
-    42rpx
-    calc(env(safe-area-inset-bottom) + 54rpx);
+    calc(env(safe-area-inset-top) + 24rpx)
+    40rpx
+    calc(env(safe-area-inset-bottom) + 30rpx);
   box-sizing: border-box;
   overflow: hidden;
   background:
     radial-gradient(
       circle at 90% 6%,
-      rgba(80, 154, 94, 0.23) 0,
+      rgba(80, 154, 94, 0.22) 0,
       rgba(80, 154, 94, 0) 28%
-    ),
-    radial-gradient(
-      circle at 4% 75%,
-      rgba(92, 147, 78, 0.16) 0,
-      rgba(92, 147, 78, 0) 25%
     ),
     linear-gradient(
       180deg,
       #031f18 0%,
-      #062b20 48%,
+      #062b20 50%,
       #0b3b29 100%
     );
 }
@@ -37,265 +32,199 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80rpx;
+  height: 72rpx;
 }
 
 .back-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 68rpx;
-  height: 68rpx;
+  width: 62rpx;
+  height: 62rpx;
   border: 1rpx solid rgba(255, 255, 255, 0.14);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.07);
   color: #fff0bd;
-  font-size: 58rpx;
-  line-height: 58rpx;
+  font-size: 52rpx;
+  line-height: 1;
 }
 
 .top-title {
-  color: rgba(239, 244, 238, 0.82);
+  color: rgba(239, 244, 238, 0.84);
   font-size: 28rpx;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 4rpx;
 }
 
 .top-placeholder {
-  width: 68rpx;
+  width: 62rpx;
+}
+
+.mission-header {
+  position: relative;
+  z-index: 4;
+  margin-top: 22rpx;
+  text-align: center;
 }
 
 .mission-label {
-  position: relative;
-  z-index: 4;
-  margin-top: 42rpx;
   color: #e6c75d;
-  font-size: 24rpx;
+  font-size: 22rpx;
   font-weight: 700;
-  text-align: center;
-  letter-spacing: 8rpx;
+  letter-spacing: 7rpx;
 }
 
 .mission-title {
-  position: relative;
-  z-index: 4;
-  margin-top: 14rpx;
+  margin-top: 8rpx;
   color: #f8dc82;
-  font-size: 58rpx;
+  font-size: 50rpx;
   font-weight: 800;
-  text-align: center;
-  letter-spacing: 4rpx;
+  letter-spacing: 3rpx;
 }
 
 .mission-card {
   position: relative;
   z-index: 4;
-  width: 100%;
-  margin-top: 52rpx;
-  padding: 48rpx 40rpx 54rpx;
+  margin-top: 28rpx;
+  padding: 30rpx 34rpx 32rpx;
+  border: 2rpx solid rgba(222, 200, 111, 0.25);
+  border-radius: 38rpx;
+  background: rgba(34, 76, 61, 0.68);
   box-sizing: border-box;
-  border: 2rpx solid rgba(222, 200, 111, 0.26);
-  border-radius: 44rpx;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(39, 80, 64, 0.66) 0%,
-      rgba(25, 64, 51, 0.76) 100%
-    );
-  box-shadow:
-    inset 0 1rpx 0 rgba(255, 255, 255, 0.05),
-    0 26rpx 70rpx rgba(0, 0, 0, 0.18);
+  text-align: center;
 }
 
 .character-area {
   position: relative;
-  width: 250rpx;
-  height: 160rpx;
+  width: 220rpx;
+  height: 120rpx;
   margin: 0 auto;
 }
 
 .character-glow {
   position: absolute;
-  top: 10rpx;
+  top: 5rpx;
   left: 50%;
-  width: 180rpx;
-  height: 130rpx;
+  width: 160rpx;
+  height: 100rpx;
   border-radius: 50%;
-  background: rgba(210, 224, 113, 0.09);
+  background: rgba(210, 224, 113, 0.08);
   transform: translateX(-50%);
-  filter: blur(18rpx);
+  filter: blur(16rpx);
 }
 
 .ant {
   position: relative;
   z-index: 2;
-  font-size: 100rpx;
-  line-height: 118rpx;
+  font-size: 88rpx;
+  line-height: 92rpx;
   text-align: center;
-  transform: translateY(-10rpx);
 }
 
 .leaf-platform {
   position: absolute;
   z-index: 1;
-  bottom: 4rpx;
+  bottom: 0;
   left: 50%;
-  width: 200rpx;
-  height: 44rpx;
+  width: 170rpx;
+  height: 32rpx;
   border-radius: 100% 18% 100% 22%;
-  background:
-    linear-gradient(
-      90deg,
-      #477d43 0%,
-      #78a956 52%,
-      #3f7542 100%
-    );
+  background: linear-gradient(
+    90deg,
+    #477d43 0%,
+    #78a956 52%,
+    #3f7542 100%
+  );
   transform: translateX(-50%) rotate(-2deg);
 }
 
 .character-name {
-  margin-top: 18rpx;
+  margin-top: 10rpx;
   color: #fff0bd;
-  font-size: 50rpx;
+  font-size: 42rpx;
   font-weight: 800;
-  text-align: center;
-}
-
-.character-title {
-  margin-top: 12rpx;
-  color: rgba(193, 215, 190, 0.72);
-  font-size: 26rpx;
-  text-align: center;
-  letter-spacing: 2rpx;
 }
 
 .dialogue {
-  margin-top: 42rpx;
-  padding: 28rpx 22rpx;
-  border-radius: 24rpx;
+  margin-top: 22rpx;
+  padding: 20rpx 18rpx;
+  border-radius: 22rpx;
   background: rgba(3, 33, 25, 0.34);
-}
-
-.dialogue-line {
-  color: rgba(245, 248, 244, 0.82);
-  font-size: 29rpx;
-  line-height: 1.85;
-  text-align: center;
-}
-
-.divider {
-  width: 82%;
-  height: 1rpx;
-  margin: 38rpx auto;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(222, 200, 111, 0.22) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  color: rgba(245, 248, 244, 0.86);
+  font-size: 28rpx;
+  line-height: 1.7;
 }
 
 .mission-description {
-  padding: 0 20rpx;
+  margin-top: 20rpx;
   color: rgba(244, 248, 243, 0.88);
-  font-size: 31rpx;
-  line-height: 1.9;
-  text-align: center;
+  font-size: 29rpx;
+  line-height: 1.6;
 }
 
 .clue-card {
   position: relative;
   z-index: 4;
-  margin-top: 34rpx;
-  padding: 34rpx 36rpx;
-  border-radius: 32rpx;
-  background: rgba(255, 255, 255, 0.065);
-}
-
-.clue-header {
-  display: flex;
-  align-items: center;
-}
-
-.clue-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50rpx;
-  height: 50rpx;
-  border-radius: 50%;
-  background: rgba(246, 207, 77, 0.14);
-  color: #f6cf4d;
-  font-size: 30rpx;
+  margin-top: 22rpx;
+  padding: 24rpx 28rpx;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .clue-title {
-  margin-left: 18rpx;
   color: #fff0bd;
-  font-size: 30rpx;
-  font-weight: 700;
-}
-
-.clue-list {
-  margin-top: 25rpx;
-}
-
-.clue-item {
-  display: flex;
-  align-items: center;
-  min-height: 58rpx;
-}
-
-.clue-dot {
-  flex: none;
-  width: 8rpx;
-  height: 8rpx;
-  margin-right: 22rpx;
-  border-radius: 50%;
-  background: #e6c75d;
-  box-shadow: 0 0 14rpx rgba(230, 199, 93, 0.48);
-}
-
-.clue-text {
-  color: rgba(228, 237, 226, 0.78);
   font-size: 28rpx;
+  font-weight: 700;
+  text-align: center;
+}
+
+.clue-row {
+  display: flex;
+  justify-content: center;
+  gap: 16rpx;
+  margin-top: 20rpx;
+}
+
+.clue-tag {
+  padding: 14rpx 22rpx;
+  border-radius: 28rpx;
+  background: rgba(246, 207, 77, 0.12);
+  color: rgba(237, 242, 235, 0.86);
+  font-size: 24rpx;
+}
+
+.safety-tip {
+  margin-top: 18rpx;
+  color: rgba(190, 211, 190, 0.64);
+  font-size: 23rpx;
+  text-align: center;
 }
 
 .action-area {
   position: relative;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 52rpx;
+  z-index: 10;
+  margin-top: 26rpx;
+  text-align: center;
 }
 
 .start-button {
-  width: 88%;
-  height: 112rpx;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 58rpx;
-  background:
-    linear-gradient(
-      135deg,
-      #f6cf4d 0%,
-      #ffe27a 52%,
-      #efc84e 100%
-    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86%;
+  height: 100rpx;
+  margin: 0 auto;
+  border-radius: 52rpx;
+  background: linear-gradient(
+    135deg,
+    #f6cf4d 0%,
+    #ffe27a 52%,
+    #efc84e 100%
+  );
   color: #123f30;
-  font-size: 34rpx;
+  font-size: 32rpx;
   font-weight: 750;
-  line-height: 112rpx;
-  box-shadow:
-    0 18rpx 42rpx rgba(243, 205, 76, 0.22),
-    inset 0 2rpx 0 rgba(255, 255, 255, 0.35);
-}
-
-.start-button::after {
-  border: none;
+  box-shadow: 0 16rpx 36rpx rgba(243, 205, 76, 0.2);
 }
 
 .start-button:active {
@@ -304,53 +233,9 @@ page {
 }
 
 .safety-hint {
-  margin-top: 28rpx;
-  color: rgba(190, 211, 190, 0.58);
-  font-size: 24rpx;
-  letter-spacing: 1rpx;
-}
-
-.firefly {
-  position: absolute;
-  z-index: 3;
-  width: 8rpx;
-  height: 8rpx;
-  border-radius: 50%;
-  background: #ffe978;
-  box-shadow:
-    0 0 10rpx rgba(255, 233, 120, 0.9),
-    0 0 28rpx rgba(255, 233, 120, 0.55);
-  animation: fireflyBlink 2.8s ease-in-out infinite;
-}
-
-.firefly-1 {
-  top: 25%;
-  left: 8%;
-}
-
-.firefly-2 {
-  top: 52%;
-  right: 8%;
-  animation-delay: 1.1s;
-}
-
-.firefly-3 {
-  bottom: 13%;
-  left: 12%;
-  animation-delay: 1.8s;
-}
-
-@keyframes fireflyBlink {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(0.7);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.15);
-  }
+  margin-top: 18rpx;
+  color: rgba(190, 211, 190, 0.56);
+  font-size: 22rpx;
 }
 
 .background-glow {
@@ -358,20 +243,59 @@ page {
   z-index: 1;
   border-radius: 50%;
   filter: blur(40rpx);
+  pointer-events: none;
 }
 
 .glow-top {
   top: -120rpx;
   right: -100rpx;
-  width: 400rpx;
-  height: 400rpx;
-  background: rgba(68, 139, 84, 0.16);
+  width: 380rpx;
+  height: 380rpx;
+  background: rgba(68, 139, 84, 0.15);
 }
 
 .glow-bottom {
   bottom: -100rpx;
   left: -150rpx;
-  width: 420rpx;
-  height: 420rpx;
-  background: rgba(108, 156, 83, 0.12);
+  width: 400rpx;
+  height: 400rpx;
+  background: rgba(108, 156, 83, 0.1);
+}
+
+@media screen and (max-height: 700px) {
+  .page {
+    padding-top: calc(env(safe-area-inset-top) + 14rpx);
+  }
+
+  .mission-header {
+    margin-top: 12rpx;
+  }
+
+  .mission-title {
+    font-size: 44rpx;
+  }
+
+  .mission-card {
+    margin-top: 18rpx;
+    padding-top: 22rpx;
+    padding-bottom: 24rpx;
+  }
+
+  .character-area {
+    height: 104rpx;
+  }
+
+  .clue-card {
+    margin-top: 16rpx;
+    padding-top: 18rpx;
+    padding-bottom: 18rpx;
+  }
+
+  .action-area {
+    margin-top: 18rpx;
+  }
+
+  .start-button {
+    height: 88rpx;
+  }
 }

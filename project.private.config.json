@@ -18,5 +18,18 @@
     "checkInvalidKey": true,
     "ignoreDevUnusedFiles": true
   },
-  "libVersion": "3.16.2"
+  "libVersion": "3.16.2",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "测试拍摄页",
+          "pathName": "pages/task/task",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
 }
