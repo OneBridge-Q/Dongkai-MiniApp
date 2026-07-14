@@ -1,0 +1,45 @@
+<view class="page">
+  <view class="glow glow-top"></view>
+  <view class="glow glow-bottom"></view>
+
+  <view class="header">
+    <view class="eyebrow">生命记忆扫描</view>
+    <view class="title">正在恢复记忆</view>
+  </view>
+
+  <view class="scanner-card">
+    <view class="scanner-frame">
+      <image
+        class="target-image"
+        src="{{imagePath}}"
+        mode="aspectFill"
+      ></image>
+
+      <view class="scan-overlay"></view>
+      <view class="scan-line"></view>
+
+      <view class="corner corner-tl"></view>
+      <view class="corner corner-tr"></view>
+      <view class="corner corner-bl"></view>
+      <view class="corner corner-br"></view>
+    </view>
+
+    <view class="status">
+      <view class="status-title">{{statusText}}</view>
+      <view class="status-subtitle">请不要关闭探索镜头</view>
+    </view>
+
+    <view class="progress-track">
+      <view
+        class="progress-bar"
+        style="{{progress}}"
+      ></view>
+    </view>
+
+    <view class="progress-text">{{progress}}%</view>
+  </view>
+
+  <view class="memory-code">
+    正在匹配昆虫世界记忆档案
+  </view>
+</view>

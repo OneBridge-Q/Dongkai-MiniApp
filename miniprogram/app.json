@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/task/task",
-    "pages/capture/capture"
+    "pages/capture/capture",
+    "pages/scan/scan",
+    "pages/result/result"
   ],
   "window": {
     "navigationBarTextStyle": "black",

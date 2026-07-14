@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="confetti confetti-1"></view>
+  <view class="confetti confetti-2"></view>
+  <view class="confetti confetti-3"></view>
+
+  <view class="success-label">记忆恢复成功</view>
+  <view class="success-title">你发现了蚂蚁</view>
+
+  <view class="result-card">
+    <view class="image-wrap">
+      <image
+        class="result-image"
+        src="{{imagePath}}"
+        mode="aspectFill"
+      ></image>
+
+      <view class="rarity-badge">常见物种</view>
+    </view>
+
+    <view class="species-name">黑蚂蚁</view>
+    <view class="species-title">昆虫世界的搬运大师</view>
+
+    <view class="divider"></view>
+
+    <view class="fact">
+      蚂蚁可以搬起比自己重很多倍的东西，
+      它们还会依靠气味和伙伴沟通。
+    </view>
+
+    <view class="reward-row">
+      <view class="reward-item">
+        <view class="reward-value">+100</view>
+        <view class="reward-label">探索积分</view>
+      </view>
+
+      <view class="reward-divider"></view>
+
+      <view class="reward-item">
+        <view class="reward-value">+1</view>
+        <view class="reward-label">昆虫图鉴</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-area">
+    <view class="primary-button" bindtap="claimCard">
+      领取我的第一张昆虫卡
+    </view>
+
+    <view class="secondary-button" bindtap="goHome">
+      稍后再领取
+    </view>
+  </view>
+</view>

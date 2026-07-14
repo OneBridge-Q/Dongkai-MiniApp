@@ -88,28 +88,20 @@ Page({
   confirmPhoto() {
     const imagePath = this.data.imagePath
 
-    if (!imagePath) {
-      wx.showToast({
-        title: '请先拍摄照片',
-        icon: 'none',
-      })
-      return
-    }
-
-    console.log('click_confirm_photo', imagePath)
-
-    wx.showLoading({
-      title: '正在恢复记忆',
-      mask: true,
+  if (!imagePath) {
+    wx.showToast({
+      title: '请先拍摄照片',
+      icon: 'none',
     })
+    return
+  }
 
-    setTimeout(() => {
-      wx.hideLoading()
+  console.log('click_confirm_photo', imagePath)
 
-      wx.showToast({
-        title: '照片提交成功',
-        icon: 'success',
-      })
-    }, 1200)
+  wx.navigateTo({
+    url:
+      '/pages/scan/scan?imagePath=' +
+      encodeURIComponent(imagePath),
+  })
   },
 })
